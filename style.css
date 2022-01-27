@@ -1,0 +1,145 @@
+/* SIDE BAR  */
+#sidebar {
+    --tw-translate-x: -100%;
+}
+#menu-close-icon {
+    display: none;
+}
+#sidebar .list{
+    list-style: none;
+}
+#sidebar .items{
+    padding:0;
+    text-align:center;  
+}
+#sidebar .nav-link{
+    padding: 10px 30px;
+    margin: 10px 0 0 10px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: .6px;
+    cursor: pointer;  
+    position: relative;
+}
+#sidebar .nav-link:hover{
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+#sidebar .active{
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-color: #fff;
+    color: #1e293b;
+}
+#sidebar .active::before,
+#sidebar .active::after
+{
+    position: absolute;
+    content: ' ';
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 99;
+}
+#sidebar .active::before{
+    top: -50px;
+    right:0;
+    background: transparent;
+    box-shadow: 35px 35px 0 10px #fff;
+    pointer-events: none;
+}
+#sidebar .nav-link::after{
+    bottom:-50px;
+    right:0;
+    background: transparent;
+    box-shadow: 35px -35px 0 10px #fff;
+    pointer-events: none;
+}
+#sidebar .nav-link .fas{
+    font-size: 20px;
+}
+#sidebar .nav-link span{
+    margin-left:10px;
+    font-size: 16px;
+}
+/* DROP DOWN  */    
+#sidebar .dropdown-list{
+    display: none;
+    transition: all .4s;
+}
+#sidebar .dropdown:hover .dropdown-list{
+    display: block;
+}
+
+/* END DROP DOWN */
+#menu-open:checked ~ #sidebar {
+    --tw-translate-x: 0;
+}
+#menu-open:checked ~ * #mobile-menu-button {
+    background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+}
+#menu-open:checked ~ * #menu-open-icon {
+    display: none;
+}
+#menu-open:checked ~ * #menu-close-icon {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    #sidebar {
+        --tw-translate-x: 0;
+    }
+}
+
+
+/* END SIDE BAR  */
+
+/* START CONTENT RIGHT SIDE  */
+#content{
+    margin: 15px 20px 15px 0;  
+}
+#content .flex .active{
+    color: #1e293b;
+}
+
+/* SEARCH INPUT  */
+#content .form-group .input{
+    top:-20px;
+    font-size: 15px;
+    font-family: inherit;
+    padding:8px 20px;
+    border-radius: 20px;
+    border: none;
+    border-bottom: 3px solid transparent;
+    width:100%;
+    display: block;
+}
+#content .form-group .input:focus{
+    outline: none;
+    box-shadow: 0 10px 20px rgba(black ,.3);
+    border-bottom: 3px solid #1e40af;
+}
+#content .form-group .input:focus:invalid{
+    border-bottom: 3px solid red;
+}
+
+#content .form-group .input::-webkit-input-placeholder{
+    color: #999;
+}
+#content .form-group .btn{
+    top:50%;
+    right: 5%;
+    transform: translate(-50%,-50%);
+}
+/* END SEARCH INPUT  */
+#content #profle-img:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+/* USER SECTION */
+
+/* END USER SECTION  */
+
+
+/* END CONTENT  */
