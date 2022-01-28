@@ -131,6 +131,14 @@
     right: 5%;
     transform: translate(-50%,-50%);
 }
+.dropdown-menu{
+    padding: 10px 100px 10px 10px;
+    transition: all 0.3s;
+}
+.dropdown-toggle:hover .dropdown-menu{
+    display: block;
+    z-index: 9999;
+}
 /* END SEARCH INPUT  */
 #content #profle-img:hover{
     cursor: pointer;
