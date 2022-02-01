@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>   
+</head>
+<body class="bg-blue-800 text-slate-500">
+    <div class="relative min-h-screen md:flex" data-dev-hint="container">
+        <!-- SIDEBAR TOGGLE ICON  -->
+        <input type="checkbox" id="menu-open" class="hidden" />
+        <label for="menu-open" class="absolute right-2 bottom-2 shadow-lg rounded-full p-2 bg-gray-100 text-gray-600 md:hidden" data-dev-hint="floating action button">
+            <svg class="h-6 w-6" xmlns="http://www.w3.org/3000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </label>
+        <!-- SIDEBAR SMALL DEVICE ICOM  -->
+        <header class="text-gray-100 flex justify-between md:hidden" data-dev-hint="mobile menu bar">
+            <a href="#" class="block p-4 text-white font-bold whitespace-nowrap truncate">
+                Your App Name
+            </a>
+            <label for="menu-open" id="mobile-menu-button" class="m-2 p-2 focus:outline-none hover:text-white hover:bg-blue-700 rounded-md">
+                <svg id="menu-open-icon" class="h-6 w-6 transition duration-300 ease-in-out" xmlns="http://www.w3.org/3000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <svg id="menu-close-icon" class="h-6 w-6 transition duration-300 ease-in-out" xmlns="http://www.w3.org/3000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </label>
+        </header>
+
+        <!-- SIDEBAR NAVIGATEION  -->
+        <aside id="sidebar" class="bg-blue-800 text-slate-500 h-screen mt-4 text-gray-100 md:w-32 xl:w-64 w-3/4 space-y-6 pt-6 px-0 absolute inset-y-0 left-0 transform md:relative md:translate-x-0 transition duration-300 ease-in-out  md:flex md:flex-col md:justify-between overflow-y-auto" data-dev-hint="sidebar; px-0 for frameless; px-2 for visually inset the navigation">
+            <div class="flex justify-center">
+                <ul class="list w-screen">
+                    <li class="items mb-6">
+                        <a href="#" class="nav-link flex items-center">   
+                            <i class="fas fa-user-shield"></i>
+                            <span class="md:hidden xl:block text-2xl font-extrabold whitespace-nowrap truncate"> Appname </span>
+                        </a>
+                    </li>
+                    <div class="bg-blue-700 h-px w-100 heih">
+
+                    </div>
+
+                    <li class="items">
+                        <a href="#" class="nav-link flex items-center">   
+                            <i class="fas fa-home "></i>
+                            <span class="md:hidden xl:block text-2xl font-extrabold whitespace-nowrap truncate"> Dashboard </span>
+                        </a>
+                    </li>
+                    <li class="items">
+                        <a href="#" class="nav-link flex items-center transition duration-300 hover:bg-blue-700">   
+                            <i class="fas fa-home "></i>
+                            <span class="md:hidden xl:block text-2xl font-extrabold whitespace-nowrap truncate"> Dashboard </span>
+                        </a>
+                    </li>
+                    <li class="items">
+                        <a href="#" class=" active nav-link flex items-center transition duration-300 hover:bg-blue-700">   
+                            <i class="fas fa-inbox "></i>
+                            <span class="md:hidden xl:block text-2xl font-extrabold whitespace-nowrap truncate"> Dashboard </span>
+                        </a>
+                    </li>
+                    <li class="items">
+                        <a href="#" class="nav-link flex items-center transition duration-300 hover:bg-blue-700">   
+                            <i class="fas fa-home "></i>
+                            <span class="md:hidden xl:block text-2xl font-extrabold whitespace-nowrap truncate"> Dashboard </span>
+                        </a>
+                    </li>
+
+                    <!-- DROPDOWN NAV  -->
+                    <li class="items dropdown">
+                        <a href="#" class="nav-link nav-link flex items-center justify-between transition duration-300 hover:bg-blue-700"> 
+                            <div class="link-item flex items-center">
+                                <i class="fas fa-home "></i>
+                                <span class="md:hidden xl:block text-2xl font-extrabold whitespace-nowrap truncate"> Dashboard </span>
+                            </div>  
+                            <span> &darr; </span>
+                        </a>  
+                        <ul class="dropdown-list list md:hidden transition duration-300">
+                            <li class="items">
+                                <a  class="nav-link nav-link nav-link flex items-center  transition duration-300 hover:bg-blue-700">   
+                                    <i class="fas fa-home transition duration-300"></i>
+                                    <span class="md:hidden xl:block text-2xl font-extrabold whitespace-nowrap truncate transition duration-300"> Dashboard </span>
+                                </a>
+                            </li>
+                            <li class="items">
+                                <a href="#" class="nav-link nav-link nav-link flex items-center  transition duration-300 hover:bg-blue-700">   
+                                    <i class="fas fa-home transition duration-300"></i>
+                                    <span class="md:hidden xl:block text-2xl font-extrabold whitespace-nowrap truncate transition duration-300"> Dashboard </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- END DROPDOWN    -->
+                </ul>
+                <!-- <div class="flex flex-col space-y-6 text-center" data-dev-hint="optional div for having an extra footer navigation">
+                    <a href="#" class="text-white flex justify-center border-y-4 border-indigo-700" title="Your App is cool">
+                        <i class="fab fa-airbnb "></i>
+                        <span class="md:hidden xl:block text-2xl font-extrabold whitespace-nowrap truncate">App Name</span>
+                    </a>
+                    <nav data-dev-hint="main navigation">
+                        <a href="#" class="flex items-center space-x-2 py-2 px-4 transition duration-300 hover:bg-blue-700 hover:text-white">
+                            <i class="fas fa-home "></i>
+                            <span class="md:hidden xl:block text-2xl font-extrabold whitespace-nowrap truncate"> Dashboard </span>
+                        </a>
+                        <a href="#" class="flex items-center space-x-2 py-2 px-4 transition duration-300 hover:bg-blue-700 hover:text-white">
+                            <i class="fas fa-home "></i>
+                            <span class="md:hidden xl:block text-2xl font-extrabold whitespace-nowrap truncate"> Dashboard </span>
+
+                            <ul class="sidebar-list">
+                                <li class="list-item"> 
+                                    <a href="#" class="flex items-center space-x-2 py-2 px-4 transition duration-300 hover:bg-blue-700 hover:text-white">
+                                        <i class="fas fa-home "></i>
+                                        <span class="md:hidden xl:block text-2xl font-extrabold whitespace-nowrap truncate"> Dashboard </span>
+                                    </a> 
+                                </li>
+                            </ul>
+                        </a>
+                       
+                        <a href="#" class="flex items-center space-x-2 py-2 px-4 transition duration-300 hover:bg-blue-700 hover:text-white group">
+                            <span class="w-4 h-4 flex-shrink-0 border border-gray-600 rounded group-hover:border-gray-400 transition duration-300"></span>
+                            <span>Without Icon And a bit longer than usual</span>
+                        </a>
+                        
+                    </nav>
+                    <nav data-dev-hint="second-main-navigation or footer navigation">
+                        <a href="#" class="block py-2 px-4 transition duration-300 hover:bg-blue-700 hover:text-white">
+                            asd
+                        </a>
+                        <a href="#" class="block py-2 px-4 transition duration-300 hover:bg-blue-700 hover:text-white">
+                            asd
+                        </a>
+                        <a href="#" class="block py-2 px-4 transition duration-300 hover:bg-blue-700 hover:text-white">
+                            asd
+                        </a>
+                    </nav>
+                </div> -->
+            </div>   
+        </aside>
+        <!-- END SIDEBAR NAVIGATION  -->
+
+        <!-- START CONTENT RIGHT SITE  -->
+        <main id="content" class="flex-1 p-3 bg-slate-100 rounded-xl shadow-xl">
+            <div class="mx-auto">
+                <!-- HEADING RIGHT-SIDE NAV  -->
+                <div class="heading p-2 flex justify-between">
+                    <div class="flex items-center">
+                        <a href="#" class="active mr-2"> Application </a>
+                        <i class="far fa-angle-right"></i>
+                        <a href="#" class="ml-2 text-gray-600"> Dashboard </a>
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <div class="form-group relative w-64 p-0 h-100">
+                            <form action="" class="p-0">
+                                <input type="text" class="input absolute  left-0 bg-gray-200" placeholder="Search....." required>
+                                <button class="btn absolute">
+                                    <i class="fas fa-search"> </i>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="notification-box ml-2">
+                            <i class="fas fa-bell relative text-gray-700 text-2xl">
+                                <span class="span absolute bg-red-800 text-white rounded-full w-2 h-2 top-0 right-0"> </span>
+                            </i>
+                        </div>
+                        <a href="#" class="profile">
+                            <img  class="rounded-full w-10 ml-2 h-10 transition duration-300" id="profle-img" src="https://media.istockphoto.com/photos/millennial-male-team-leader-organize-virtual-workshop-with-employees-picture-id1300972574?b=1&k=20&m=1300972574&s=170667a&w=0&h=2nBGC7tr0kWIU8zRQ3dMg-C5JLo9H2sNUuDjQ5mlYfo=" alt="">
+                        </a>
+
+                    </div>
+                </div>
+                <div class="bg-gray-200 h-px w-100 mt-8">
+
+                </div>
+                <!-- END HEADING  -->
+
+                <!-- /CONTENT -->
+                    <div class="flex items-center ml-8">
+                        <h2 class="text-lg font-medium mr-auto"> Form </h2>
+                    </div>
+                    <div class="py-6 sm:py-20">
+                        <div class="line flex flex-col lg:flex-row justify-center px-5 sm:px-20">
+                            <div class="lg:text-center flex items-center lg:block flex-1  z-10 sm:mt-5">
+                                <a href="#" class="w-10 w-10 link bg-slate-200 text-slate-500 text-center text-2xl lg:p-3 active"> 1 </a>
+                                <div class="lg:w-23 font-medium text-base lg:mt-3 ml-3 lg:mx-auto"> Create New Account </div>
+                            </div>
+                            <div class="lg:text-center flex items-center lg:block flex-1  z-10 sm:mt-5">
+                                <a href="#" class="w-10 w-10 rounded-full bg-slate-200 text-slate-500  text-center text-2xl lg:p-3"> 1 </a>
+                                <div class="lg:w-23 font-medium text-base lg:mt-3 ml-3 lg:mx-auto"> Setup Your Account </div>
+                            </div>
+                            <div class="lg:text-center flex items-center lg:block flex-1  z-10 sm:mt-5">
+                                <a href="#" class="w-10 w-10 rounded-full bg-slate-200 text-slate-500  text-center text-2xl lg:p-3"> 1 </a>
+                                <div class="lg:w-23 font-medium text-base lg:mt-3 ml-3 lg:mx-auto"> Create New Account </div>
+                            </div>
+                            <div class="lg:text-center flex items-center lg:block flex-1  z-10 sm:mt-5">
+                                <a href="#" class="w-10 w-10 rounded-full bg-slate-200 text-slate-500  text-center text-2xl lg:p-3"> 1 </a>
+                                <div class="lg:w-23 font-medium text-base lg:mt-3 ml-3 lg:mx-auto"> Create New Account </div>
+                            </div>
+                        </div>   
+                    </div>
+                    <!-- form  -->
+                    <div class="px-5 sm:px-20 mt-10 pt-10 border-t border-slate-200">
+                        <div class="text-2xl font-lg text-slate-800"> Profle Settings </div>
+                            <form action="" class="pt-5">
+                                <div class="grid grid-cols-1 md:grid-cols-2  gap-4 gap-y-5">
+                                    <div class="">
+                                        <div class="form-group  w-64 p-0 h-100"> 
+                                            <label for="form-label"> Text Input </label>
+                                            <input type="text" class="input left-0 bg-gray-200" placeholder="Text Input" required>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="form-group  w-64 p-0 h-100"> 
+                                            <label for="form-label"> Email Input </label>
+                                            <input type="Email" class="input left-0 bg-gray-200" placeholder="Email Input" required>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="form-group  w-64 p-0 h-100"> 
+                                            <label for="form-label"> Choose a car </label>
+                                            <select class="input left-0 bg-gray-200" name="" id="" placeholder="Email Input" required>
+                                                <option value="volvo">Volvo XC90</option>
+                                                <option value="saab">Saab 95</option>
+                                                <option value="mercedes">Mercedes SLK</option>
+                                                <option value="audi">Audi TT</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <span> Radio Button </span>
+                                        <div class="grid grid-cols-2">
+                                            <div class="form__radio-group">
+                                                <input type="radio" class="form__radio-input" id="big" name="small">
+                                                <label for="big" class="form__radio-label">
+                                                  <span class="form__radio-button"></span>
+                                                   Small tour group
+                                                 </label>
+                                              </div>
+                                              <div class="form__radio-group">
+                                                <input type="radio" class="form__radio-input" id="small" name="small">
+                                                <label for="small" class="form__radio-label">
+                                                  <span class="form__radio-button"></span>
+                                                  Large tour group
+                                                </label>
+                          
+                                              </div>
+                                        </div>          
+                                    </div>
+                                </div>
+                                <div class="flex justify-center align-center pt-10">
+                                    <a href="" class="py-2 px-6 border-2 border-slate-200 text-slate-500 hover:bg-slate-500 hover:text-white transition duration-300">Previous</a>
+                                    <a href="" class="py-2 px-10 bg-blue-800 text-white rounded hover:bg-slate-500 hover:text-white transition duration-300"> Next</a>
+                                </div>
+                            </form> 
+                        </div>
+                    </div>
+                    <!-- end form  -->
+                <!-- /End CONTENT -->
+            </div>
+        </main>
+        <!-- END CONTENT  -->
+    </div>
+</body>
+</html>
